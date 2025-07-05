@@ -12,7 +12,7 @@ openai_model = "gpt-4o-mini"
 logical_llm = ChatOpenAI(temperature=0.1, model=openai_model)
 creative_llm = ChatOpenAI(temperature=0.9, model=openai_model)
 
-# TASK: LangChain will aid to generate an article draft based on the following requirements:
+# TASK: LangChain will aid to generate an article following the requirements below:
 # 1. Title
 # 2. Hook
 # 3. Purpose
