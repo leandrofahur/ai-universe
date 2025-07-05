@@ -1,6 +1,3 @@
-# Native python modules:
-import os
-
 # Third-party modules:
 from langchain_openai import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
@@ -86,11 +83,12 @@ creative_chain = chat_prompt | creative_llm
 logical_chain_output = logical_chain.invoke({"article_outline": article_prompt})
 creative_chain_output = creative_chain.invoke({"article_outline": article_prompt})
 
+print(logical_chain_output.content)
+print("\n\n")
 print("-" * 100)
-print(f"Logical Chain Output:\n {logical_chain_output.content}")
-print("-" * 100)
-print(f"Creative Chain Output:\n {creative_chain_output.content}")
-print("-" * 100)
+print("\n\n")
+print(creative_chain_output.content)
+
 
 
 

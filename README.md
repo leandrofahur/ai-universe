@@ -1,1 +1,1 @@
-# ai-universe
+# AI Universe
