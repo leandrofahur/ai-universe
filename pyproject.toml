@@ -1,0 +1,21 @@
+[project]
+name = "ai-universe"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.26",
+    "langchain-core>=0.3.68",
+    "langchain-openai>=0.3.28",
+    "openai>=1.95.1",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "langchain>=0.3.26",
+    "langchain-core>=0.3.68",
+    "langchain-openai>=0.3.28",
+    "openai>=1.95.1",
+]
