@@ -46,8 +46,18 @@ ai-universe/
 ├── pyproject.toml           # Project configuration
 ├── uv.lock                  # Dependency lock file
 ├── main.py                  # Main entry point
+├── .gitignore               # Git ignore rules
 ├── langchain/               # LangChain examples and tutorials
+│   └── 01-build-a-simple-llm-application.py
 ├── agents/                  # AI agents and workflows
+│   └── 01-using-agents-with-the-api.py
+├── openai/                  # OpenAI API examples
+│   ├── 01-using-models-with-the-api.py
+│   ├── 02-using-models-vision-capability.py
+│   └── 03-using-tools.py
+├── machine-learning/        # Machine learning examples
+│   └── natural-language-processing/
+│       └── 01-vector-models-and-text-processing.py
 ├── CODE_OF_CONDUCT.md       # Community guidelines
 ├── LICENSE                  # Project license
 └── README.md                # This file
@@ -83,8 +93,19 @@ $ uv sync
 # Run main entry point
 $ python main.py
 
-# Run LangChain basics example
-$ python langchain/basics/01-chainiing-prompts.py
+# Run LangChain example
+$ python langchain/01-build-a-simple-llm-application.py
+
+# Run OpenAI API examples
+$ python openai/01-using-models-with-the-api.py
+$ python openai/02-using-models-vision-capability.py
+$ python openai/03-using-tools.py
+
+# Run agents example
+$ python agents/01-using-agents-with-the-api.py
+
+# Run machine learning example
+$ python machine-learning/natural-language-processing/01-vector-models-and-text-processing.py
 ```
 
 ### Code Quality
@@ -121,13 +142,37 @@ The project uses `pyproject.toml` for configuration and `uv.lock` for reproducib
 
 ## 🚀 Getting Started with Examples
 
-### 1. Basic LangChain Example
+### 1. LangChain Example
 ```bash
-# Run the chaining prompts example
-$ python langchain/basics/01-chainiing-prompts.py
+# Run the LangChain LLM application example
+$ python langchain/01-build-a-simple-llm-application.py
 ```
 
-### 2. Main Application
+### 2. OpenAI API Examples
+```bash
+# Basic model usage
+$ python openai/01-using-models-with-the-api.py
+
+# Vision capability example
+$ python openai/02-using-models-vision-capability.py
+
+# Tools usage example
+$ python openai/03-using-tools.py
+```
+
+### 3. AI Agents Example
+```bash
+# Run the agents example
+$ python agents/01-using-agents-with-the-api.py
+```
+
+### 4. Machine Learning Example
+```bash
+# Run the NLP vector models example
+$ python machine-learning/natural-language-processing/01-vector-models-and-text-processing.py
+```
+
+### 5. Main Application
 ```bash
 # Run the main application
 $ python main.py
