@@ -45,4 +45,18 @@ tool_call = response.output[0]
 args = json.loads(tool_call.arguments)
 
 print(args["latitude"], args["longitude"])
-print(get_weather(args["latitude"], args["longitude"]))
+result = get_weather(args["latitude"], args["longitude"])
+
+input_messages.append(tool_call)
+input_messages.append({         
+    "type": "function_call_output",
+    "call_id": tool_call.call_id,
+    "output": str(result)
+})
+
+response_2 = client.responses.create(
+    model="gpt-4.1",
+    input=input_messages,
+    tools=tools,
+)
+print(response_2.output_text)
